@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    width: 100%;
+    background-color: #181818;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 0.9em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px; /* Define a altura fixa do header */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.logo-name-link {
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+    height: 100%;
+    font-family: "Moderustic", sans-serif; /* Aplica a fonte Moderustic */
+    font-weight: 420; /* Define o peso da fonte */
+    font-size: 1.1em; /* Define o tamanho da fonte */
+    color: #ffffff;
+
+    padding: 3px 8px; /* Adiciona padding para criar espaço interno */
+    transition: border 0.3s ease, background-color 0.3s ease; /* Suaviza a transição da borda e da cor de fundo */
+    border-radius: 8px; /* Adiciona cantos arredondados */
+}
+
+.logo-name-link img {
+    margin-top: 3px; /* Ajusta a margem diretamente na imagem, se necessário */
+}
+
+.logo-name-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Adiciona uma cor de fundo quase transparente */
+    color: #ffffff; /* Mantém a cor do texto ao passar o mouse */
+}
+
+.header-paragraphs {
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end; /* Alinha os itens à direita */
+    gap: 25px; /* Espaçamento entre os itens */
+    align-items: center; /* Centraliza verticalmente os itens no header */
+    height: 100%; /* Garante que os itens ocupem a altura total do header */
+}
+
+.paragraph {
+    margin:0;
+    font-size: 1.1em;
+    font-family: "Moderustic", sans-serif;
+    font-weight: 420;
+    line-height: 1.6;
+    color: #ffffff;
+    position: relative;
+}
+
+.paragraph::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+    height: 2px;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+
+.paragraph:hover::after {
+    transform: scaleX(1);
+}
+
+.content-wrapper {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-heading,
+.subtext-right {
+    text-align: left;
+    max-width: 50%;
+    font-size: 1.2em;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    font-family: "Moderustic", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #1f1f1f;
+}
+
+.main-heading {
+    font-family: "Moderustic", sans-serif;
+    font-size: 2.5em;
+    font-weight: 350;
+    color: #000000;
+}
+
+.highlight-name {
+    font-weight: 450;
+    color: #000000;
+}
+
+.highlight-role {
+    font-weight: 450;
+    color: #000000;
+}
+
+.highlight-role-1 {
+    font-weight: 380;
+    color: #000000;
+}
+
+.highlight p {
+    font-family: "Moderustic", sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #1f1f1f;
+}

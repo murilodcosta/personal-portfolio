@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murilo Costa | Desenvolvedor Back-End</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/mc-logo.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-name">
+            <a href="index.html" class="logo-name-link">
+                <img src="{{ url_for('static', filename='img/mc-logo-w.png') }}" alt="Logo" style="vertical-align: middle; width: 30px; height: 30px;">
+                Murilo Costa
+            </a>
+        </div>
+        <div class="header-paragraphs">
+            <a href="#sobre" class="paragraph">Sobre</a>
+            <a href="#habilidades" class="paragraph">Habilidades</a>
+            <a href="#projetos" class="paragraph">Projetos</a>
+            <a href="#contato" class="paragraph">Contato</a>
+        </div>
+    </header>
+
+    <div class="container-wrapper">
+        <h1 class="welcome-heading">SEJA BEM VINDO, EU SOU</h1>
+        <h2 class="main-heading">
+            <span class="highlight-name">Murilo Dias da Costa</span>
+            <span class="highlight-role"><br>Desenvolvedor <span class="highlight-role-1"><em>back end.</em></span></span>
+        </h2>
+        <p class="subtext-right">Capacitando a inovação digital com soluções otimizadas e eficientes ao ERP Sankhya.</p>
+    </div>
+
+    <!-- Outras seções -->
+    <div class="section" id="habilidades">
+        <h2>Habilidades</h2>
+        <!-- Conteúdo sobre habilidades -->
+    </div>
+
+    <div class="section" id="projetos">
+        <h2>Projetos</h2>
+        <!-- Conteúdo sobre projetos -->
+    </div>
+
+    <div class="section" id="contato">
+        <h2>Contato</h2>
+        <!-- Conteúdo sobre contato -->
+    </div>
+
+
+    <!-- Link para o arquivo JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
