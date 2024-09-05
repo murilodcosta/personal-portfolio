@@ -3,10 +3,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 0;
     height: 100vh;
     background-color: #f4f4f4;
     color: #333;
@@ -22,7 +19,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 60px; /* Define a altura fixa do header */
+    height: 60px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -30,7 +27,7 @@ body {
 }
 
 .header a {
-    text-decoration: none; /* Remove o sublinhado dos links */
+    text-decoration: none;
 }
 
 .logo-name-link {
@@ -40,36 +37,35 @@ body {
     gap: 15px;
     align-items: center;
     height: 100%;
-    font-family: "Moderustic", sans-serif; /* Aplica a fonte Moderustic */
-    font-weight: 420; /* Define o peso da fonte */
-    font-size: 1.1em; /* Define o tamanho da fonte */
+    font-family: "Moderustic", sans-serif;
+    font-weight: 420;
+    font-size: 1.1em;
     color: #ffffff;
-
-    padding: 3px 8px; /* Adiciona padding para criar espaço interno */
-    transition: border 0.3s ease, background-color 0.3s ease; /* Suaviza a transição da borda e da cor de fundo */
-    border-radius: 8px; /* Adiciona cantos arredondados */
+    padding: 5px 10px;
+    transition: border 0.4s ease, background-color 0.4s ease;
+    border-radius: 12px;
 }
 
 .logo-name-link img {
-    margin-top: 3px; /* Ajusta a margem diretamente na imagem, se necessário */
+    margin-top: 3px;
 }
 
 .logo-name-link:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Adiciona uma cor de fundo quase transparente */
-    color: #ffffff; /* Mantém a cor do texto ao passar o mouse */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
 }
 
 .header-paragraphs {
     margin-right: 10px;
     display: flex;
-    justify-content: flex-end; /* Alinha os itens à direita */
-    gap: 25px; /* Espaçamento entre os itens */
-    align-items: center; /* Centraliza verticalmente os itens no header */
-    height: 100%; /* Garante que os itens ocupem a altura total do header */
+    justify-content: flex-end;
+    gap: 25px;
+    align-items: center;
+    height: 100%;
 }
 
 .paragraph {
-    margin:0;
+    margin: 0;
     font-size: 1.1em;
     font-family: "Moderustic", sans-serif;
     font-weight: 420;
@@ -95,19 +91,22 @@ body {
     transform: scaleX(1);
 }
 
-.content-wrapper {
-    text-align: center;
+.container-wrapper {
+    position: relative;
+    top: 110px;
+    left: 20px;
+    text-align: left;
     max-width: 600px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 
 .welcome-heading,
 .subtext-right {
     text-align: left;
-    max-width: 50%;
+    max-width: 80%;
     font-size: 1.2em;
     margin-top: -20px;
     margin-bottom: -20px;
@@ -131,7 +130,8 @@ body {
 
 .highlight-role {
     font-weight: 450;
-    color: #000000;
+    color
+    : #000000;
 }
 
 .highlight-role-1 {
@@ -139,10 +139,242 @@ body {
     color: #000000;
 }
 
-.highlight p {
+#mouse-icon {
+    top: 20%;
+    left: 50%;
+    position: relative;
+    width: 30px;
+    height: 50px;
+    border: 2px solid #1f1f1f;
+    border-radius: 50px;
+}
+
+#mouse-icon::after {
+    position: absolute;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    content: '';
+    background-color: #1f1f1f;
+    left: calc(50% - 5px);
+    border-radius: 10px;
+    animation: mouse 2s infinite;
+}
+
+@keyframes mouse {
+    0% {
+        opacity: 1;
+        top: 10px;
+    }
+    100% {
+        opacity: 0%;
+        top: 30px;
+    }
+}
+
+.arrows-icon {
+    top: 21%;
+    left: 17px;
+    position: relative;
+    width: 30px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid #1f1f1f;
+    border-bottom: 2px solid #1f1f1f;
+    transform: rotate(45deg);
+    margin-bottom: 5px;
+    animation: arrow-animation 1.5s infinite;
+}
+
+.one {
+    animation-delay: 0s;
+}
+
+.two {
+    animation-delay: 0.3s;
+}
+
+.three {
+    animation-delay: 0.6s;
+}
+
+@keyframes arrow-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(0) rotate(45deg);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(10px) rotate(45deg);
+    }
+}
+
+.first-hr {
+    margin-top: 200px;
+    border: 1px solid #8e8e8e;
+    margin-bottom: 40px;
+}
+
+hr {
+    border: 1px solid #8e8e8e;
+    margin: 40px 0;
+}
+
+.section h2 {
+    text-align: center;
     font-family: "Moderustic", sans-serif;
-    font-size: 1.2em;
-    font-weight: 400;
-    line-height: 1.6;
+    font-size: 2em;
+    font-weight: 200;
+    margin-bottom: 20px;
     color: #1f1f1f;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.skill {
+    padding: 10px 15px;
+    background-color: #ebebeb;
+    color: #1f1f1f;
+    border-radius: 50px;
+    font-family: "Moderustic", sans-serif;
+    font-size: 0.8em;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+.experience-item {
+    background-color: #f4f4f4;
+    border-left: 4px solid #181818;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+}
+
+
+.experience-position {
+    font-family: "Moderustic", sans-serif;
+    font-size: 1.3em;
+    font-weight: 650;
+    margin: 0 0 10px 0;
+    color: #1f1f1f;
+}
+
+.experience-enterprise{
+    font-family: "Moderustic", sans-serif;
+    font-size: 1.0em;
+    font-weight: 650;
+    margin: 0 0 10px 0;
+    color: #3b3b3b;
+}
+
+.experience-date {
+    font-size: 0.9em;
+    color: #555;
+    text-align: right;
+}
+.experience-description {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #323232;
+    line-height: 1.6;
+}
+
+#contato {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+#contato h2 {
+    font-family: "Moderustic", sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1f1f1f;
+}
+
+#contato p {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto 20px auto; /* Centraliza o parágrafo e adiciona espaço abaixo */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: #333;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #181818;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #181818;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Moderustic", sans-serif;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #333;
 }

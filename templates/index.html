@@ -33,22 +33,69 @@
         <p class="subtext-right">Capacitando a inovação digital com soluções otimizadas e eficientes ao ERP Sankhya.</p>
     </div>
 
-    <!-- Outras seções -->
-    <div class="section" id="habilidades">
-        <h2>Habilidades</h2>
-        <!-- Conteúdo sobre habilidades -->
+    <div id="mouse-icon"></div>
+
+    <div class="arrows-icon">
+        <span class="arrow one"></span> 
+        <span class="arrow two"></span>
+        <span class="arrow three"></span>
     </div>
 
-    <div class="section" id="projetos">
-        <h2>Projetos</h2>
-        <!-- Conteúdo sobre projetos -->
+    <hr class="first-hr">
+
+    <div class="section" id="habilidades">
+        <h2>HABILIDADES & TECNOLOGIAS</h2>
+        <div class="skills-container">
+            <div class="skill">JavaScript</div>
+            <div class="skill">PL/SQL</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">Python</div>
+            <div class="skill">Git</div>
+            <div class="skill">Docker</div>
+            <div class="skill">Java</div>
+            <div class="skill">Spring Boot</div>
+            <div class="skill">PL/SQL</div>
+            <div class="skill">Flask</div>
+            <div class="skill">SQL</div>
+            <div class="skill">C++</div>
+        </div>
     </div>
+
+    <hr>
+
+    <div class="section" id="projetos">
+        <h2>EXPERIÊNCIA PROFISSIONAL</h2>
+        <div class="experience-container">
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="experience-position">Analista de Sistemas</span><br>
+                        <span class="experience-enterprise">Sankhya Gestão de Negócios</span>
+                    </div>
+                    <span class="experience-date">2023 - Presente</span>
+                </div>
+                <p class="experience-description">Desenvolvimento de software, focado em criações de 
+                    rotinas, ações agendadas e eventos prográmeis personalizados para otimizar e atender a 
+                    necessidade do negócio.</p>
+            </div>
+        </div>
+    </div>    
+    
+
+    <hr>
 
     <div class="section" id="contato">
         <h2>Contato</h2>
-        <!-- Conteúdo sobre contato -->
+        <p>Adoraria ouvir você! Sinta-se à vontade para entrar em contato com qualquer pergunta ou dúvida.</p>
+        <form class="contact-form" action="mailto:seuemail@exemplo.com" method="POST" enctype="text/plain">
+            <input type="text" id="name" name="name" placeholder="Escreva o assunto aqui." required>
+            <input type="email" id="email" name="email" placeholder="usuario@dominio.com" required>
+            <textarea id="message" name="message" rows="5" placeholder="Escreva sua mensagem aqui." required></textarea>
+    
+            <button type="submit">Enviar</button>
+        </form>
     </div>
-
+    
 
     <!-- Link para o arquivo JS -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
