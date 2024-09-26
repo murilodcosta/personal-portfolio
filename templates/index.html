@@ -6,23 +6,41 @@
     <title>Murilo Costa | Desenvolvedor Back-End</title>
     <link rel="icon" href="{{ url_for('static', filename='img/mc-logo.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo-name">
-            <a href="index.html" class="logo-name-link">
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top site-header">
+        <div class="container">
+            <a href="index.html" class="navbar-brand brand-link">
                 <img src="{{ url_for('static', filename='img/mc-logo-w.png') }}" alt="Logo" style="vertical-align: middle; width: 30px; height: 30px;">
                 Murilo Costa
             </a>
-        </div>
-        <div class="header-paragraphs">
-            <a href="#sobre" class="paragraph">Sobre</a>
-            <a href="#habilidades" class="paragraph">Habilidades</a>
-            <a href="#projetos" class="paragraph">Projetos</a>
-            <a href="#contato" class="paragraph">Contato</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end site-nav" id="navbarNav">
+                <ul class="navbar-nav nav-menu">
+                    <li class="nav-item">
+                        <a href="#sobre" class="nav-link nav-item">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#habilidades" class="nav-link nav-item">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projetos" class="nav-link nav-item">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contato" class="nav-link nav-item">Contato</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
+    
 
     <div class="container-wrapper">
         <h1 class="welcome-heading">SEJA BEM VINDO, EU SOU</h1>
